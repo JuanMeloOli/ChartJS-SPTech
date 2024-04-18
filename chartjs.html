@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="chartjs.css">
+    <title>ChartJs</title>
+</head>
+<body>
+  <div class="tittle-container">
+    <h1 class="title-txt">Atividade ChartJS</h1>
+  </div>
+    <div class="container">
+      <div>
+        <canvas id="myChart" class="chart1"></canvas>
+      </div>
+      <div>
+        <canvas id="myChart2" class="chart2"></canvas>
+      </div>
+    </div>
+
+</body>
+
+
+<script>
+
+  const myChart = document.getElementById('myChart');
+
+  new Chart(myChart, {
+    type: 'line',
+    data: {
+      labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+      datasets: [{
+        label: 'Temperatura',
+        data: [30, 29, 28, 25, 22, 23],
+        borderWidth: 1,
+        backgroundColor: '#a20000',
+        borderColor:'#a20000'
+      },{
+
+        label: 'Umidade',
+        data: [80, 82, 80, 85, 80, 82],
+        borderWidth: 1,
+        backgroundColor: '#2800d8',
+        borderColor:'#2800d8'
+      }
+    ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  const myChart2 = document.getElementById('myChart2');
+
+new Chart(myChart2, {
+  type: 'bar',
+  data: {
+    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+    datasets: [{
+      label: 'Temperatura média',
+      data: [22, 24, 27, 23, 20, 18],
+      borderWidth: 1,
+      backgroundColor: '#a20000',
+      borderColor:'#a20000'
+    },{
+
+      label: 'Umidade média',
+      data: [90, 89, 93, 87, 88, 82],
+      borderWidth: 1,
+      backgroundColor: '#2800d8',
+      borderColor:'#2800d8'
+    }
+  ]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+  
+</script>
+</html>

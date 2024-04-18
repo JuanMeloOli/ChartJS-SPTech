@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-style: bold;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #ff0000 0%,  #ffff00 33%, #00ff00 66%, #0000ff 100% );
+    height: 100vh;
+}
+
+.tittle-container{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 70vh;
+}
+
+.chart1, .chart2{
+    width: 45vw;
+    height: 100vh;
+    border: 3px solid black;
+    animation: back 6s infinite reverse;
+}
+@keyframes back {
+    0%{
+        border-color: #ffffff;
+        background-color: #000000;
+    }
+    40%{
+        border-color: #000000;
+        background-color: #ffffff;
+    }
+    100%{
+        border-color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+
